@@ -12,7 +12,7 @@ module Inploy
 
       def local_setup
         super
-        run "ln -s #{application_path}/public /home/#{user}/public_html/#{application}"
+        run "ln -s #{application_path}/public ~/public_html/#{application}"
       end
 
       def local_update
@@ -21,7 +21,7 @@ module Inploy
       end
 
       def path
-        @path ||= "/home/#{user}/rails_app"
+        @path ||= "~/rails_app"
       end
 
       private
